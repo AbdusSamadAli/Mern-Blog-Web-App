@@ -23,7 +23,7 @@ app.use(
 app.use(cookieParser());
 
 mongoose
-  .connect("mongodb://localhost:27017/blog", {
+  .connect("process.env.MONGODB_URI", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
